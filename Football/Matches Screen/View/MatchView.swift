@@ -23,14 +23,14 @@ struct MatchView: View {
         self.onItemSelected = onItemSelected
     }
     
-    var homeTeam : String{
+    private var homeTeam : String{
         (match?.homeTeam?.shortName ?? "")
     }
-    var awayTeam : String{
+    private var awayTeam : String{
         (match?.awayTeam?.shortName ?? "")
     }
     
-    var homeTeamLogo : URL?{
+    private var homeTeamLogo : URL?{
         URL(string:match?.homeTeam?.crest ?? "")
     }
     
@@ -38,17 +38,17 @@ struct MatchView: View {
         URL(string: match?.awayTeam?.crest ?? "")
     }
     
-    var premierLeagueLogo : URL?{
+    private var premierLeagueLogo : URL?{
         URL(string: match?.competition?.emblem ?? "")
     }
     
-    var homeResult : String?{
+    private var homeResult : String?{
         String(match?.score?.fullTime?.home ?? 0)
     }
-    var awayResult : String?{
+    private var awayResult : String?{
         String(match?.score?.fullTime?.away ?? 0)
     }
-    var status: Status{
+    private var status: Status{
         (match?.status ?? .finished)
     }
   

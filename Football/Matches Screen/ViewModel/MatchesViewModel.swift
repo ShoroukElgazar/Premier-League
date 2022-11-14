@@ -19,6 +19,7 @@ public class MatchesViewModel: ObservableObject {
     @Published var savedItems: Set<Int> = []
     @Published var id = 0
     @Published var error : ResponseError? = nil
+    @Published var isDataLoaded = false
     
     init(repo: MatchesRepoProtocol){
         self.repo = repo
@@ -36,12 +37,14 @@ public class MatchesViewModel: ObservableObject {
     func getMatches() async -> [MatchResponse]? {
         do {
             let footballMatches = try await repo.getMatches()
+            isDataLoaded = true
             return footballMatches
         } catch (let error) {
             guard let error = error as? ResponseError  else{
                 return nil
             }
             self.error = error
+            isDataLoaded = false
             return []
         }
     }

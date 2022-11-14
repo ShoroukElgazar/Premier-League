@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import CoreData
 import Combine
 
 struct PremierLeagueScreen: View {
@@ -14,17 +13,18 @@ struct PremierLeagueScreen: View {
     @StateObject var vm: MatchesViewModel
     @State private var isFirstLoading = true
     @State private var favoriteColor = 0
+    @State var isShowingFavorites = false
     
     var body: some View {
-      
-            ScrollViewReader { proxy in
-                VStack{
-                    SegmentedView()
-                    
-                    ListOfMatches(proxy: proxy)
-                }
+        
+        ScrollViewReader { proxy in
+            VStack{
+                HandleSegmentedView()
+               
+                ListOfMatches(proxy: proxy)
+            }
             
-            }.errorAlert(error: $vm.error)
+        }.errorAlert(error: $vm.error)
     }
     
     private func ListOfMatches(proxy: ScrollViewProxy) -> some View {
@@ -39,27 +39,27 @@ struct PremierLeagueScreen: View {
                 }.font(.system(size: 16))
                     .fontWeight(.semibold)
                     .foregroundColor(.black)
-
+                
             }.listRowSeparator(.hidden)
                 .background(Color.clear)
-          
+            
         }   .padding(.top, 10)
             .listStyle(.plain)
             .background(Color.clear)
-           
-    }
         
+    }
+    
     private func MatchesView(proxy: ScrollViewProxy,matchRes: MatchResponse) -> some View{
-            Group{
-                MatchView(match: matchRes, winner: matchRes.winner ?? "", isMatchFav: vm.contains(matchRes)){ match in
-                    vm.toggleFav(item: match)
-                }.id(matchRes.id)
-                    .onAppear{
-                        if isFirstLoading{
-                            proxy.scrollTo(vm.id,anchor: .top )
-                            isFirstLoading = false
-                        }
-            }
+        Group{
+            MatchView(match: matchRes, winner: matchRes.winner ?? "", isMatchFav: vm.contains(matchRes)){ match in
+                vm.toggleFav(item: match)
+            }.id(matchRes.id)
+                .onAppear{
+                    if isFirstLoading{
+                        proxy.scrollTo(vm.id,anchor: .top )
+                        isFirstLoading = false
+                    }
+                }
         }
     }
     
@@ -67,21 +67,33 @@ struct PremierLeagueScreen: View {
         VStack{
             HStack{
                 Spacer().frame(height: 30)
+                
                 Button(Strings.all){
                     loadMatchesUponFilter(showingFavs: false)
+                    isShowingFavorites = false
                 } .frame(width: 50,height: 20)
+                    .background(isShowingFavorites ? .white :  .black)
+                    .cornerRadius(5)
+                    .foregroundColor(isShowingFavorites ? .black :  .white)
                     .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                    .stroke(Color.black, lineWidth: 1))
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.black, lineWidth: 1))
                     .padding(5)
+                
                 
                 Button(Strings.toggleFav){
                     loadMatchesUponFilter(showingFavs: true)
-                }.frame(width: 50,height: 20)
-                    .overlay(
-                    RoundedRectangle(cornerRadius: 5)
-                    .stroke(Color.black, lineWidth: 1))
-                    .padding(5)
+                    isShowingFavorites = true
+                }
+                .frame(width: 50,height: 20)
+                .background(isShowingFavorites ? .black :  .white)
+                .cornerRadius(5)
+                .foregroundColor(isShowingFavorites ? .white :  .black)
+                .overlay(
+                 RoundedRectangle(cornerRadius: 5)
+                .stroke(Color.black, lineWidth: 1))
+                .padding(5)
+                
                 Spacer().frame(height: 30)
             }
         }   .font(.system(size: 18))
@@ -96,6 +108,15 @@ struct PremierLeagueScreen: View {
         vm.sortFavs()
     }
 
+    private func HandleSegmentedView() -> some View{
+        Group{
+            if vm.isDataLoaded{
+                SegmentedView()
+            }else{
+                EmptyView()
+            }
+        }
+    }
     
 }
 
