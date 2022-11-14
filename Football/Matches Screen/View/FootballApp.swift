@@ -9,12 +9,10 @@ import SwiftUI
 
 @main
 struct FootballApp: App {
-    let persistenceController = PersistenceController.shared
 
     var body: some Scene {
         WindowGroup {
             PremierLeagueScreen.build()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

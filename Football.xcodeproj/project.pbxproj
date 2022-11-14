@@ -27,7 +27,6 @@
 		97DBBC84291C4811008C7870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DBBC83291C4811008C7870 /* Assets.xcassets */; };
 		97DBBC87291C4811008C7870 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DBBC86291C4811008C7870 /* Preview Assets.xcassets */; };
 		97DBBC89291C4811008C7870 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC88291C4811008C7870 /* Persistence.swift */; };
-		97DBBC8C291C4811008C7870 /* Football.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC8A291C4811008C7870 /* Football.xcdatamodeld */; };
 		97DBBC96291C4812008C7870 /* MatchesDataSrcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC95291C4812008C7870 /* MatchesDataSrcTests.swift */; };
 		97DBBCA0291C4812008C7870 /* FootballUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC9F291C4812008C7870 /* FootballUITests.swift */; };
 		97DBBCA2291C4812008C7870 /* FootballUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBCA1291C4812008C7870 /* FootballUITestsLaunchTests.swift */; };
@@ -78,7 +77,6 @@
 		97DBBC83291C4811008C7870 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97DBBC86291C4811008C7870 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97DBBC88291C4811008C7870 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
-		97DBBC8B291C4811008C7870 /* Football.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Football.xcdatamodel; sourceTree = "<group>"; };
 		97DBBC91291C4812008C7870 /* FootballTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DBBC95291C4812008C7870 /* MatchesDataSrcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDataSrcTests.swift; sourceTree = "<group>"; };
 		97DBBC9B291C4812008C7870 /* FootballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FootballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -194,7 +192,6 @@
 				97DBBCAE291C4821008C7870 /* Network */,
 				97DBBC83291C4811008C7870 /* Assets.xcassets */,
 				97DBBC88291C4811008C7870 /* Persistence.swift */,
-				97DBBC8A291C4811008C7870 /* Football.xcdatamodeld */,
 				97DBBC85291C4811008C7870 /* Preview Content */,
 			);
 			path = Football;
@@ -413,7 +410,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97DBBC8C291C4811008C7870 /* Football.xcdatamodeld in Sources */,
 				97E67A6829215FDA00349B51 /* Defaults.swift in Sources */,
 				97DBBCB4291C483F008C7870 /* MatchModel.swift in Sources */,
 				971CE11E2922D19D00E1F6CB /* ResponseError.swift in Sources */,
@@ -841,19 +837,6 @@
 			productName = RxMoya;
 		};
 /* End XCSwiftPackageProductDependency section */
-
-/* Begin XCVersionGroup section */
-		97DBBC8A291C4811008C7870 /* Football.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				97DBBC8B291C4811008C7870 /* Football.xcdatamodel */,
-			);
-			currentVersion = 97DBBC8B291C4811008C7870 /* Football.xcdatamodel */;
-			path = Football.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 97DBBC74291C480F008C7870 /* Project object */;
 }
