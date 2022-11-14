@@ -15,8 +15,6 @@
 		97033887291F1733002CC349 /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97033886291F1733002CC349 /* DateHelper.swift */; };
 		971CE11E2922D19D00E1F6CB /* ResponseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 971CE11D2922D19D00E1F6CB /* ResponseError.swift */; };
 		975C96AE292288B300356BE5 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 975C96AD292288B300356BE5 /* Strings.swift */; };
-		975C96B42922928C00356BE5 /* SVGKit in Frameworks */ = {isa = PBXBuildFile; productRef = 975C96B32922928C00356BE5 /* SVGKit */; };
-		975C96B62922928C00356BE5 /* SVGKitSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 975C96B52922928C00356BE5 /* SVGKitSwift */; };
 		97C3E50B291C68D600EB153C /* View+Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3E50A291C68D600EB153C /* View+Error.swift */; };
 		97C3E50D291C6CF200EB153C /* MatchesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3E50C291C6CF200EB153C /* MatchesViewModel.swift */; };
 		97C3E50F291C6F0900EB153C /* MatchesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97C3E50E291C6F0900EB153C /* MatchesRepo.swift */; };
@@ -100,12 +98,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				975C96B42922928C00356BE5 /* SVGKit in Frameworks */,
 				97D42597291F54EC00F4AFB2 /* Collections in Frameworks */,
 				97033882291EF536002CC349 /* Kingfisher in Frameworks */,
 				97DBBCB9291C491A008C7870 /* Moya in Frameworks */,
 				97DBBCB7291C491A008C7870 /* CombineMoya in Frameworks */,
-				975C96B62922928C00356BE5 /* SVGKitSwift in Frameworks */,
 				97DBBCBD291C491A008C7870 /* RxMoya in Frameworks */,
 				97D4259B291F54EC00F4AFB2 /* OrderedCollections in Frameworks */,
 				97D42599291F54EC00F4AFB2 /* DequeModule in Frameworks */,
@@ -296,8 +292,6 @@
 				97D42596291F54EC00F4AFB2 /* Collections */,
 				97D42598291F54EC00F4AFB2 /* DequeModule */,
 				97D4259A291F54EC00F4AFB2 /* OrderedCollections */,
-				975C96B32922928C00356BE5 /* SVGKit */,
-				975C96B52922928C00356BE5 /* SVGKitSwift */,
 			);
 			productName = Football;
 			productReference = 97DBBC7C291C480F008C7870 /* Football.app */;
@@ -376,7 +370,6 @@
 				9703387D291ECE3D002CC349 /* XCRemoteSwiftPackageReference "ModelMapper-Swift" */,
 				97033880291EF536002CC349 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				97D42595291F54EC00F4AFB2 /* XCRemoteSwiftPackageReference "swift-collections" */,
-				975C96B22922928C00356BE5 /* XCRemoteSwiftPackageReference "SVGKit" */,
 			);
 			productRefGroup = 97DBBC7D291C480F008C7870 /* Products */;
 			projectDirPath = "";
@@ -783,14 +776,6 @@
 				kind = branch;
 			};
 		};
-		975C96B22922928C00356BE5 /* XCRemoteSwiftPackageReference "SVGKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SVGKit/SVGKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 3.0.0;
-			};
-		};
 		97D42595291F54EC00F4AFB2 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/apple/swift-collections.git";
@@ -819,16 +804,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 97033880291EF536002CC349 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
-		};
-		975C96B32922928C00356BE5 /* SVGKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 975C96B22922928C00356BE5 /* XCRemoteSwiftPackageReference "SVGKit" */;
-			productName = SVGKit;
-		};
-		975C96B52922928C00356BE5 /* SVGKitSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 975C96B22922928C00356BE5 /* XCRemoteSwiftPackageReference "SVGKit" */;
-			productName = SVGKitSwift;
 		};
 		97D42596291F54EC00F4AFB2 /* Collections */ = {
 			isa = XCSwiftPackageProductDependency;

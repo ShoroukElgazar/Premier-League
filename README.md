@@ -23,3 +23,10 @@ The performed requests handle successful results, failure results and no interne
 ### Testing
 The app was built using MVVM architecture.
 
+### Dependecies
+The app uses SPM
+Moya: for creating the network layer. 
+Kingfisher: for getting image data. 
+ModelMapper: for mapping models.
+SwiftCollection: for providing data structure implementation.
+
