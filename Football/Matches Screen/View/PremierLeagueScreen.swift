@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  PremierLeagueScreen.swift
 //  Football
 //
 //  Created by Shorouk Mohamed on 11/9/22.
@@ -69,17 +69,24 @@ struct PremierLeagueScreen: View {
                 Spacer().frame(height: 30)
                 Button(Strings.all){
                     loadMatchesUponFilter(showingFavs: false)
-                }.padding(.trailing)
+                } .frame(width: 50,height: 20)
+                    .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                    .stroke(Color.black, lineWidth: 1))
+                    .padding(5)
                 
                 Button(Strings.toggleFav){
                     loadMatchesUponFilter(showingFavs: true)
-                }
+                }.frame(width: 50,height: 20)
+                    .overlay(
+                    RoundedRectangle(cornerRadius: 5)
+                    .stroke(Color.black, lineWidth: 1))
+                    .padding(5)
                 Spacer().frame(height: 30)
             }
         }   .font(.system(size: 18))
             .fontWeight(.bold)
             .foregroundColor(.black)
-//            .background(Color.black)
         
     }
     

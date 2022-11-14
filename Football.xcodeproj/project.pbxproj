@@ -23,7 +23,7 @@
 		97D42599291F54EC00F4AFB2 /* DequeModule in Frameworks */ = {isa = PBXBuildFile; productRef = 97D42598291F54EC00F4AFB2 /* DequeModule */; };
 		97D4259B291F54EC00F4AFB2 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 97D4259A291F54EC00F4AFB2 /* OrderedCollections */; };
 		97DBBC80291C480F008C7870 /* FootballApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC7F291C480F008C7870 /* FootballApp.swift */; };
-		97DBBC82291C480F008C7870 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC81291C480F008C7870 /* ContentView.swift */; };
+		97DBBC82291C480F008C7870 /* PremierLeagueScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC81291C480F008C7870 /* PremierLeagueScreen.swift */; };
 		97DBBC84291C4811008C7870 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DBBC83291C4811008C7870 /* Assets.xcassets */; };
 		97DBBC87291C4811008C7870 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97DBBC86291C4811008C7870 /* Preview Assets.xcassets */; };
 		97DBBC89291C4811008C7870 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DBBC88291C4811008C7870 /* Persistence.swift */; };
@@ -74,7 +74,7 @@
 		97C3E510291C6F5B00EB153C /* MatchesDataSrc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchesDataSrc.swift; sourceTree = "<group>"; };
 		97DBBC7C291C480F008C7870 /* Football.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Football.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DBBC7F291C480F008C7870 /* FootballApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FootballApp.swift; sourceTree = "<group>"; };
-		97DBBC81291C480F008C7870 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		97DBBC81291C480F008C7870 /* PremierLeagueScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PremierLeagueScreen.swift; sourceTree = "<group>"; };
 		97DBBC83291C4811008C7870 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		97DBBC86291C4811008C7870 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		97DBBC88291C4811008C7870 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -158,7 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				97DBBC7F291C480F008C7870 /* FootballApp.swift */,
-				97DBBC81291C480F008C7870 /* ContentView.swift */,
+				97DBBC81291C480F008C7870 /* PremierLeagueScreen.swift */,
 				97033877291E8B29002CC349 /* CardView.swift */,
 				97033879291E9AC9002CC349 /* MatchView.swift */,
 				97C3E50A291C68D600EB153C /* View+Error.swift */,
@@ -424,7 +424,7 @@
 				97C3E50F291C6F0900EB153C /* MatchesRepo.swift in Sources */,
 				97C3E511291C6F5B00EB153C /* MatchesDataSrc.swift in Sources */,
 				97033887291F1733002CC349 /* DateHelper.swift in Sources */,
-				97DBBC82291C480F008C7870 /* ContentView.swift in Sources */,
+				97DBBC82291C480F008C7870 /* PremierLeagueScreen.swift in Sources */,
 				97C3E50D291C6CF200EB153C /* MatchesViewModel.swift in Sources */,
 				975C96AE292288B300356BE5 /* Strings.swift in Sources */,
 				97DBBCB2291C4838008C7870 /* EndPoints.swift in Sources */,
